@@ -7,12 +7,12 @@ layout(location=2) in vec2 texcoord;
 uniform mat4 model_matrix;
 uniform mat4 view_projection_matrix;
 
-out vec2 texture_coord;
+out vec2 tc;
 
 void main()
 {
 	vec4 wpos = model_matrix * vec4(position, 1);
 	gl_Position = view_projection_matrix * wpos;
 
-	texture_coord = texcoord;
+	tc = texcoord;
 }

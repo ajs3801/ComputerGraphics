@@ -80,7 +80,7 @@ void render()
 	// bind vertex array object
 	if (p_mesh && p_mesh->vertex_array) glBindVertexArray(p_mesh->vertex_array);
 
-	// build the model matrix
+	// build the model matrix 
 	mat4 model_matrix = mat4::translate(cam.at) *
 						mat4::rotate(vec3(0, 0, 1), angle) *
 						mat4::translate(-cam.at);
